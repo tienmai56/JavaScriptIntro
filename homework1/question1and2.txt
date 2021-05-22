@@ -1,0 +1,26 @@
+
+1. And answer the following questions:
+In JavaScript, in what cases, you will get the SyntaxError telling you that some of your variables have invalid names? Can you give 3 different examples of invalid variable names?
+- case 1: when declarding a variable twice
++  example: 
+let a = 5
+let a= 6 -> error
+
+let y = 'hello'
+let y= 'what's up' -> error 
+
+let z = true
+let z= false -> error
+
+-case 2: variable's name is the same as reserved words
++ example: 
+let return = 5 -> error 
+let let = 7 -> error 
+
+In JavaScript, how to check a variable data types?
+- use typeof 
+
+2. Watch this video to review about HTML, CSS, JavaScript functions in the front-end web, and then connect these two columns
+
+Answer:
+1-b, 2-a, 3-e, 4-c
