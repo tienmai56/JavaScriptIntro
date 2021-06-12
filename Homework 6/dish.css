@@ -1,0 +1,54 @@
+div {
+    font-family: Helvetica;
+}
+
+.intro{
+    font-style: italic;
+}
+
+
+.chicken-pic{
+    border-radius: 5%;
+    width: 350px;
+    height: 600px;
+    box-shadow: 3px 6px;
+}
+
+#content{
+    width: 80%;
+}
+
+.favorite{
+    line-height: 1.2 ;
+}
+
+#favorite{
+    border-style: dotted;
+    border-width: 2px;
+}
+
+#ingredients, #list{
+    list-style: none;
+}
+
+.other-dishes > img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+
+}
+
+.chicken-pic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#list{
+    display: block;
+    margin-left: 25px;
+    width: 50%;
+
+}
+
