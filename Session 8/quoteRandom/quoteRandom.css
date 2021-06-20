@@ -1,0 +1,29 @@
+#btn{  
+    background: none;
+    border: none;
+    float: right;
+    
+    
+ }
+
+ i{
+     float:right
+ }
+
+ #content{
+     position: relative;
+     top: 150px;
+     font-size:400%;
+     text-align: center;
+     
+     
+ }
+
+ #author{
+    position: relative;
+    top: 150px;
+    font-size:200%;
+    text-align: center;
+    
+    
+}
