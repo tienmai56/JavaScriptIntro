@@ -1,0 +1,232 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Content here -->
+  <main>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="logo">BookThryft</div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/home.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" id="on-sale" aria-current="page" href="http://127.0.0.1:5500/onsale.html">
+                Sales</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Category
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="http://127.0.0.1:5500/nonfiction.html">Non fiction</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:5500/fiction.html">Fiction</a></li>
+
+              </ul>
+            </li>
+
+            <li class="nav-item openBtn">
+
+              <a class="nav-link active sell-books" id="on-sale" aria-current="page" href="#"
+                onclick="return openForm()">Sell
+              </a>
+
+
+              <div class="loginPopup">
+                <div class="formPopup" id="popupForm">
+                  <form action="/action_page.php" class="formContainer">
+                    <h2>Sell your books for great price!</h2>
+                    <div class="info-required">
+                      <input type="text" id="name" placeholder="Your Name" name="namge" required>
+                      <input type="text" id="address" placeholder="Your address for book pickup" name="address"
+                        required>
+                      <input type="text" id="email" placeholder="Your Email" name="email" required>
+                      <input type="text" id="phone" placeholder="Your Phone number" name="phone" required>
+                      <input type="text" id="order-description"
+                        placeholder="Describe books you want to sell and their conditions" name="oder-description"
+                        required>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+                  </form>
+                </div>
+              </div>
+            </li>
+
+
+
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control me-2" id="searchBar" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
+          <div class="shopping-cart">
+            <li>
+              <a id="shopping-cart-click" href="http://127.0.0.1:5500/cartsummary.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor" class="bi bi-cart"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg>
+              </a>
+              <asp:Label ID="lblCartCount" runat="server" class="badge badge-warning" ForeColor="White" />0</asp:label>
+
+            </li>
+
+          </div>
+
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- slideshow begins -->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- carousell starts here -->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="url('../../images/children.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>50% profit is donated to support the education of orphan children</h5>
+                <p>Learn more about our partner here</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="url('../../images/wrapping.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>We use recyclable wrapping paper to protect the environment</h5>
+                <p>Learn about our wrapping paper here.</p>
+              </div>
+            </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+          </button>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+
+        </a>
+      </div>
+      <!-- carousell ends -->
+
+
+
+      <div class="container2 mb-5 mt-5">
+        <h2>Sales</h2>
+
+      </div>
+
+
+
+  </main>
+  </div>
+
+  <div class="footer">
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Sustainability</h5>
+
+            <p>
+              We’re committed to sustainable practices by choosing second-hand first and opting for plastic-free
+              packaging.
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Giving back</h5>
+
+            <p>
+              We give back to meaningful causes through donating a portion of all our profits and sharing our platform
+              with social organisations.
+            </p>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="js/onsale.js" type="module"></script>
+  <script>
+    function openForm() {
+      document.getElementById("popupForm").style.display = "block";
+    }
+    function closeForm() {
+      document.getElementById("popupForm").style.display = "none";
+    }
+  </script>
+</body>
+
+</html>

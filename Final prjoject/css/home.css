@@ -1,0 +1,176 @@
+#navbarDropdown{
+    color: black
+}
+
+body {
+    background-color: white;
+    border-radius: 10px
+}
+
+
+.col-md-4{
+    border-radius: gray;
+    margin-top: 3.5%;
+}
+
+.add-to-cart{
+    font-size: 120%;
+}
+
+.price{
+    font-size: 150%;
+}
+
+.round{
+  width: 230;
+  height: 350;
+}
+
+.bg-danger{
+    color: green;
+}
+
+#lblCartCount {
+    font-size: 14px;
+    background: green;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    
+}
+
+.d-block{
+    height: 650;
+    width: 350;
+}
+
+.p-3{
+    
+    height: 100px;
+    font-size: 25;
+
+}
+
+.btn-override{
+    background-color: green;
+
+}
+
+li::marker{
+    content: ""
+}
+
+.container {
+    margin-top: 2%;
+}
+
+.navbar-nav{
+    margin-left: 10%;
+  
+}
+
+.logo{
+    color: green;
+    font-style: italic;
+    font-variant:unset;
+    font-family:cursive;
+    font-size: 30px;
+    margin-left: 3%;
+}
+
+/* //pop up form */
+* {
+    box-sizing: border-box;
+}
+
+.openBtn {
+    display: flex;
+    justify-content: left;
+    width: 200px;
+}
+
+.sell-books{
+    width: 100px;
+}
+
+.loginpopup{
+    margin-left: 40px;
+}
+
+.openButton {
+    border: none;
+    border-radius: 5px;
+    background-color: #1c87c9;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+    position: fixed;
+}
+
+.loginPopup {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.formPopup {
+    display: none;
+    position: fixed;
+    left: 45%;
+    top: 5%;
+    transform: translate(-50%, 5%);
+    border: 3px solid #999999;
+    z-index: 9;
+}
+
+.formContainer {
+    width: 700px;
+    height: 700px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.formContainer input[type=text],
+.formContainer input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #eee;
+}
+
+.formContainer input[type=text]:focus,
+.formContainer input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.formContainer .btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #8ebf42;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.formContainer .cancel {
+    background-color: #cc0000;
+}
+
+.formContainer .btn:hover,
+.openButton:hover {
+    opacity: 1;
+}
+
+
+.info-required{
+    margin-top: 5%;
+}
+
+#order-description{
+    height: 2000x;
+    
+}
